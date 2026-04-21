@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Salary Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <h2 id="formTitle">Login</h2>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginRole">Role</label>
+                <select id="loginRole" name="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="employee">Employee</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <div id="loginError" class="error-msg"></div>
+            <p class="toggle-text">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+        </form>
+
+        <form id="registerForm" style="display: none;">
+            <div class="form-group">
+                <label for="registerRole">Role</label>
+                <select id="registerRole" name="role" required>
+                    <option value="employee">Employee</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="regUsername">Username</label>
+                <input type="text" id="regUsername" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+            <div id="registerError" class="error-msg"></div>
+            <div id="registerSuccess" style="color: green; margin-top: 10px; text-align: center;"></div>
+            <p class="toggle-text">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+        </form>
+
+    </div>
+    <script src="js/auth.js?v=4"></script>
+</body>
+</html>

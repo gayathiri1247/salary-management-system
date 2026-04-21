@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Salary Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Employee Dashboard</div>
+        <ul class="navbar-nav">
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 id="welcomeUser">Welcome, Employee</h1>
+        
+        <div class="cards">
+            <div class="card">
+                <h3>My Salaries</h3>
+                <p>View your complete salary history and details.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 2rem;">Salary Records</h2>
+        <div style="overflow-x: auto;">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Basic Salary</th>
+                        <th>Bonus</th>
+                        <th>Deductions</th>
+                        <th>Total Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="mySalariesTableBody">
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="salaryError" class="error-msg"></div>
+    </div>
+
+    <!-- Ensure auth runs first to protect route -->
+    <script src="js/auth.js?v=4"></script>
+    <script src="js/employee-dashboard.js?v=4"></script>
+</body>
+</html>

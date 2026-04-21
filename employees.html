@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees - Salary Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Salary Management</div>
+        <ul class="navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="employees.html" class="active">Employees</a></li>
+            <li><a href="salaries.html">Salaries</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Employee Management</h2>
+        
+        <div class="form-container">
+            <h3>Add New Employee</h3>
+            <form id="addEmployeeForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="empName" required>
+                </div>
+                <div class="form-group">
+                    <label>Role</label>
+                    <input type="text" id="empRole" required>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <input type="text" id="empDept" required>
+                </div>
+                <div class="form-group">
+                    <label>Basic Salary ($)</label>
+                    <input type="number" id="empSalary" step="0.01" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Employee</button>
+            </form>
+        </div>
+
+        <h3>Employee List</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Basic Salary ($)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <!-- Data will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/auth.js?v=4"></script>
+    <script src="js/employees.js?v=4"></script>
+</body>
+</html>

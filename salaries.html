@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salaries - Salary Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Salary Management</div>
+        <ul class="navbar-nav">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="employees.html">Employees</a></li>
+            <li><a href="salaries.html" class="active">Salaries</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Salary Management</h2>
+        
+        <div class="form-container">
+            <h3>Calculate & Save Salary</h3>
+            <form id="addSalaryForm">
+                <div class="form-group">
+                    <label>Select Employee</label>
+                    <select id="employeeSelect" class="form-control" required style="width:100%; padding: 0.75rem;">
+                        <option value="">-- Loading Employees --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Bonus ($)</label>
+                    <input type="number" id="bonus" step="0.01" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label>Deductions ($)</label>
+                    <input type="number" id="deductions" step="0.01" value="0" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate and Save</button>
+            </form>
+        </div>
+
+        <h3>Salary Records</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee Name</th>
+                    <th>Basic Salary ($)</th>
+                    <th>Bonus ($)</th>
+                    <th>Deductions ($)</th>
+                    <th>Total Salary ($)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="salaryTableBody">
+                <!-- Data will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/auth.js?v=4"></script>
+    <script src="js/salaries.js?v=4"></script>
+</body>
+</html>
